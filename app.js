@@ -1,6 +1,6 @@
 const express =require('express');
 const app = express();
-var port = process.env.PORT || 3000;
+var port =  3000;
 var welcome = 'Welcome to the server'
 const colors = [
   'red',

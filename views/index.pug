@@ -7,5 +7,10 @@ block content
    ul
     each color in colors
      li= color
+  section#form
+   form(action='/hello',method='post')
+    label Please enter here a name:
+     input(type='text', name='username')
+    button(type='submit') Submit
  
  

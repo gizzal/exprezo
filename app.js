@@ -23,6 +23,6 @@ app.get('/',(req,res)=>{
 });
 app.post('/hello',(req,res)=>{
   console.dir(req);
-  res.render('index', {colors,welcome});
+  res.json(req.body);
 });
 app.listen(port);

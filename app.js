@@ -20,6 +20,20 @@ const colors = [
   'purple'
 ];
 
+app.use((req,res,next)=>{
+  req.somestuff="some stuff !!!"
+  console.log('here marina');
+  next();
+},(req,res,next)=>{
+  console.log('here marina 1 and half');
+  next();
+});
+
+app.use((req,res,next)=>{
+  console.log('here marina 2 and '+req.somestuff);
+  next();
+});
+
 app.get('/',(req,res)=>{
   res.clearCookie('username');
   res.render('index', {colors,welcome});
